@@ -8,6 +8,14 @@ MUST NEEDED:
   - Username: Admin.
   - Password: 2325.
 
+- How to Run:
+  1. Open as project in IntelliJ Idea IDE.
+  2. Download, and install JavaFX framework and related tools.
+  3. Go to File -> Project Structure and add your installed JavaFX SDK to the project library, and apply the settings.
+  4. Install the 'Bungee' font in the "src/main/resources/fonts" folder;
+     otherwise the program and scenebuilder might not display the used font.
+  5. Run the App.java file.
+
 Features
 
 - Account Management:
@@ -36,13 +44,6 @@ Technologies Used:
   - Programming Language: Java.
   - Framework: JavaFX for GUI.
   - Data Storage: Gson for JSON file management.
-
-How to Run:
-
-1. Open as project in IntelliJ Idea IDE.
-2. Download, and install JavaFX framework and related tools.
-3. Go to File -> Project Structure and add your installed JavaFX SDK to the project librar, and apply the settings.
-4. Run the App.java file.
 
 Folder Structure
 
