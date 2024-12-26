@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="384.0" prefWidth="785.0" style="-fx-background-color: #1b1b18;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gamecastle.Controllers.AdminPanelController">
+
+    <children>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="93.0" layoutY="14.0" prefHeight="36.0" prefWidth="228.0" style="-fx-font-family: Bungee; -fx-font-size: 20;" text="Welcome, Admin!" textFill="#e3dbca" />
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="151.0" layoutY="50.0" prefHeight="36.0" prefWidth="114.0" style="-fx-font-family: Bungee; -fx-font-size: 16;" text="Add a Game" textAlignment="CENTER" textFill="#e83c4b">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Button fx:id="goBack" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="342.0" mnemonicParsing="false" onAction="#goBack" prefHeight="26.0" prefWidth="92.0" style="-fx-background-color: #e3dbca; -fx-font-family: Bungee; -fx-font-size: 15; -fx-background-radius: 5;" text="Go Back" textAlignment="CENTER" textFill="#1b1b18" textOverrun="CENTER_ELLIPSIS">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Button>
+        <TextField fx:id="addNameField" layoutX="109.0" layoutY="86.0" prefHeight="26.0" prefWidth="260.0" style="-fx-background-color: #e3dbca; -fx-text-fill: #1b1b18; -fx-font-family: Cambria; -fx-background-radius: 5;" />
+        <ImageView fitHeight="383.0" fitWidth="388.0" layoutX="402.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../images/logo_light.png" />
+            </image>
+        </ImageView>
+      <Label contentDisplay="CENTER" layoutX="31.0" layoutY="81.0" prefHeight="36.0" prefWidth="79.0" style="-fx-font-family: Bungee; -fx-font-size: 16;" text="Name:" textAlignment="CENTER" textFill="#e83c4b">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label contentDisplay="CENTER" layoutX="31.0" layoutY="130.0" prefHeight="36.0" prefWidth="79.0" style="-fx-font-family: Bungee; -fx-font-size: 16;" text="Price:" textAlignment="CENTER" textFill="#e83c4b">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="addPriceField" layoutX="194.0" layoutY="135.0" prefHeight="26.0" prefWidth="175.0" style="-fx-background-color: #e3dbca; -fx-text-fill: #1b1b18; -fx-font-family: Cambria; -fx-background-radius: 5;" />
+      <TextField layoutX="109.0" layoutY="135.0" prefHeight="26.0" prefWidth="86.0" style="-fx-background-color: #e83c4b; -fx-font-family: Bungee; -fx-font-size: 12; -fx-text-fill: #1b1b18; -fx-background-radius: 5;" text="Dollar(s)" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="134.0" layoutY="216.0" prefHeight="36.0" prefWidth="149.0" style="-fx-font-family: Bungee; -fx-font-size: 16;" text="Remove a Game" textAlignment="CENTER" textFill="#e83c4b">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label contentDisplay="CENTER" layoutX="31.0" layoutY="252.0" prefHeight="36.0" prefWidth="79.0" style="-fx-font-family: Bungee; -fx-font-size: 16;" text="Name:" textAlignment="CENTER" textFill="#e83c4b">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="removeNameField" layoutX="109.0" layoutY="257.0" prefHeight="26.0" prefWidth="260.0" style="-fx-background-color: #e3dbca; -fx-text-fill: #1b1b18; -fx-font-family: Cambria; -fx-background-radius: 5;" />
+      <Button fx:id="removeGame" alignment="CENTER" contentDisplay="CENTER" layoutX="281.0" layoutY="299.0" mnemonicParsing="false" onAction="#removeGame" prefHeight="26.0" prefWidth="86.0" style="-fx-background-color: #e83c4b; -fx-font-family: Bungee; -fx-font-size: 15; -fx-background-radius: 5;" text="Remove" textAlignment="CENTER" textFill="#1b1b18" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="addGame" alignment="CENTER" contentDisplay="CENTER" layoutX="312.0" layoutY="179.0" mnemonicParsing="false" onAction="#addGame" prefHeight="26.0" prefWidth="55.0" style="-fx-background-color: #e83c4b; -fx-font-family: Bungee; -fx-font-size: 15; -fx-background-radius: 5;" text="Add" textAlignment="CENTER" textFill="#1b1b18" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>

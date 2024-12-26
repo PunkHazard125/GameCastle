@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="384.0" prefWidth="785.0" style="-fx-background-color: #2e3c56;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gamecastle.Controllers.CustomerPanelController">
+    <children>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="50.0" layoutY="35.0" prefHeight="26.0" prefWidth="306.0" style="-fx-font-family: Bungee; -fx-font-size: 22;" text="So, what are you up to?" textFill="#faf2ed" />
+        <Button fx:id="goBack" alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="326.0" mnemonicParsing="false" onAction="#handleGoBack" prefHeight="35.0" prefWidth="109.0" style="-fx-background-color: #fea098; -fx-font-family: Bungee; -fx-font-size: 18; -fx-background-radius: 5;" stylesheets="@stylesheets/libraryButton.css" text="Go Back" textAlignment="CENTER" textFill="#1b1b18" textOverrun="CENTER_ELLIPSIS">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Button>
+        <ImageView fitHeight="383.0" fitWidth="388.0" layoutX="402.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../images/logo_customer_panel.png" />
+            </image>
+        </ImageView>
+        <Button fx:id="updateWallet" alignment="CENTER" contentDisplay="CENTER" layoutX="117.0" layoutY="203.0" mnemonicParsing="false" onAction="#handleWallet" prefHeight="35.0" prefWidth="182.0" style="-fx-background-color: #faf2ed; -fx-font-family: Bungee; -fx-font-size: 18; -fx-background-radius: 5;" stylesheets="@stylesheets/walletButton.css" text="Update Wallet" textAlignment="CENTER" textFill="#1b1b18" textOverrun="CENTER_ELLIPSIS">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Button>
+      <Button fx:id="library" alignment="CENTER" contentDisplay="CENTER" layoutX="137.0" layoutY="88.0" mnemonicParsing="false" onAction="#handleLibrary" prefHeight="35.0" prefWidth="133.0" style="-fx-background-color: #faaa68; -fx-font-family: Bungee; -fx-font-size: 18; -fx-background-radius: 5;" stylesheets="@stylesheets/libraryButton.css" text="Library" textAlignment="CENTER" textFill="#1b1b18" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="purchase" alignment="CENTER" contentDisplay="CENTER" layoutX="135.0" layoutY="147.0" mnemonicParsing="false" onAction="#handlePurchase" prefHeight="35.0" prefWidth="137.0" style="-fx-background-color: #98b6ec; -fx-font-family: Bungee; -fx-font-size: 18; -fx-background-radius: 5;" stylesheets="@stylesheets/libraryButton.css" text="Purchase" textAlignment="CENTER" textFill="#1b1b18" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="delete1" alignment="CENTER" contentDisplay="CENTER" layoutX="108.0" layoutY="260.0" mnemonicParsing="false" onAction="#handleDelete" prefHeight="35.0" prefWidth="191.0" style="-fx-background-color: #e83c4b; -fx-font-family: Bungee; -fx-font-size: 18; -fx-background-radius: 5;" stylesheets="@stylesheets/libraryButton.css" text="Delete Account" textAlignment="CENTER" textFill="#1b1b18" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Pane fx:id="walletPane" layoutX="17.0" layoutY="20.0" prefHeight="344.0" prefWidth="368.0" style="-fx-background-color: #faf2ed; -fx-background-radius: 10;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="54.0" layoutY="20.0" prefHeight="41.0" prefWidth="263.0" style="-fx-font-family: Bungee; -fx-font-size: 20;" text="Add To Your wallet" textAlignment="CENTER" textFill="#2e3c56" textOverrun="CENTER_ELLIPSIS" />
+            <Button fx:id="update" alignment="CENTER" layoutX="58.0" layoutY="269.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="109.0" style="-fx-background-color: #faaa68; -fx-font-family: Bungee; -fx-font-size: 17; -fx-background-radius: 5;" text="Update" textAlignment="CENTER" textFill="#1b1b18" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="16.0" layoutY="172.0" prefHeight="25.0" prefWidth="337.0" style="-fx-font-family: Bungee; -fx-font-size: 18;" text="Enter Amount To Add (Dollars)" textAlignment="CENTER" textFill="#e83c4b" textOverrun="CENTER_ELLIPSIS" />
+            <TextField fx:id="amountField" alignment="CENTER" layoutX="20.0" layoutY="205.0" prefHeight="30.0" prefWidth="329.0" style="-fx-background-color: #2e3c56; -fx-background-radius: 5; -fx-text-fill: #faf2ed;">
+               <font>
+                  <Font name="Cambria Bold" size="15.0" />
+               </font>
+            </TextField>
+            <Button fx:id="goBackWalletMenu" alignment="CENTER" layoutX="205.0" layoutY="269.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="109.0" style="-fx-background-color: #fea098; -fx-font-family: Bungee; -fx-font-size: 17; -fx-background-radius: 5;" text="Go Back" textAlignment="CENTER" textFill="#1b1b18" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="87.0" layoutY="73.0" prefHeight="26.0" prefWidth="200.0" style="-fx-font-family: Bungee; -fx-font-size: 18;" text="Current Balance" textAlignment="CENTER" textFill="#73bda8" textOverrun="CENTER_ELLIPSIS" />
+            <Label fx:id="balanceLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="105.0" prefHeight="26.0" prefWidth="347.0" style="-fx-font-family: Bungee; -fx-font-size: 18;" textAlignment="CENTER" textFill="#1b1b18" textOverrun="CENTER_ELLIPSIS" />
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>

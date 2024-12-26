@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="384.0" prefWidth="785.0" style="-fx-background-color: #2e3c56;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gamecastle.Controllers.LibraryController">
+    <ListView fx:id="libraryView" layoutX="409.0" layoutY="83.0" prefHeight="275.0" prefWidth="352.0" stylesheets="@stylesheets/library.css" />
+    <Button fx:id="deleteGame" layoutX="409.0" layoutY="33.0" mnemonicParsing="false" onAction="#handleDeleteGame" prefHeight="32.0" prefWidth="98.0" style="-fx-background-color: #e83c4b; -fx-font-family: Bungee; -fx-font-size: 16; -fx-background-radius: 5;" text="Delete" textFill="#1b1b18" />
+    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="641.0" layoutY="33.0" prefHeight="32.0" prefWidth="120.0" style="-fx-background-color: #faaa68; -fx-font-family: Bungee; -fx-background-radius: 5; -fx-font-size: 16;" text="Your Games" textAlignment="CENTER" textFill="#1b1b18" textOverrun="CENTER_ELLIPSIS" />
+    <ImageView fitHeight="399.0" fitWidth="383.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../../images/logo_library.png" />
+    </ImageView>
+    <Button fx:id="goBack" layoutX="525.0" layoutY="33.0" mnemonicParsing="false" onAction="#handleGoBack" prefHeight="32.0" prefWidth="98.0" style="-fx-background-color: #faf2ed; -fx-font-family: Bungee; -fx-font-size: 16; -fx-background-radius: 5;" text="Go back" textFill="#1b1b18" />
+</AnchorPane>

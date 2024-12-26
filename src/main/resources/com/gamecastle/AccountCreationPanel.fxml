@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="383.0" prefWidth="785.0" style="-fx-background-color: #1b1b18;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gamecastle.Controllers.AccountCreationPanelController">
+    <children>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="85.0" layoutY="14.0" prefHeight="36.0" prefWidth="246.0" style="-fx-font-family: Bungee; -fx-font-size: 22;" text="Account Creation" textFill="#e3dbca" />
+        <Label alignment="CENTER" layoutX="150.0" layoutY="64.0" prefHeight="26.0" prefWidth="117.0" style="-fx-font-family: Bungee; -fx-font-size: 18;" text="Username" textAlignment="CENTER" textFill="#e83c4b">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Button fx:id="createAccount" alignment="CENTER" contentDisplay="CENTER" layoutX="197.0" layoutY="330.0" mnemonicParsing="false" onAction="#handleCreateAccount" prefHeight="28.0" prefWidth="158.0" style="-fx-background-color: #e3dbca; -fx-font-family: Bungee; -fx-font-size: 15; -fx-background-radius: 5;" text="Create Account" textAlignment="CENTER" textFill="#1b1b18">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Button>
+        <TextField fx:id="usernameField" layoutX="47.0" layoutY="98.0" prefHeight="28.0" prefWidth="307.0" style="-fx-background-color: #e3dbca; -fx-text-fill: #1b1b18; -fx-background-radius: 5;">
+         <font>
+            <Font name="Cambria Bold" size="14.0" />
+         </font></TextField>
+        <TextField fx:id="passwordTextField" layoutX="50.0" layoutY="182.0" prefHeight="28.0" prefWidth="246.0" style="-fx-background-color: #e3dbca; -fx-text-fill: #1b1b18; -fx-font-family: Cambria; -fx-background-radius: 5;">
+            <font>
+                <Font name="Cambria Bold" size="14.0" />
+            </font>
+        </TextField>
+        <PasswordField fx:id="passwordField" layoutX="50.0" layoutY="182.0" prefHeight="28.0" prefWidth="246.0" style="-fx-background-color: #e3dbca; -fx-text-fill: #1b1b18; -fx-background-radius: 5;">
+         <font>
+            <Font name="Cambria Bold" size="14.0" />
+         </font></PasswordField>
+        <ToggleButton fx:id="showPassword" contentDisplay="CENTER" layoutX="294.0" layoutY="182.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="60.0" style="-fx-background-color: #e83c4b; -fx-font-family: Bungee; -fx-font-size: 14; -fx-background-radius: 5;" text="Show" textAlignment="CENTER" textFill="#e3dbca">
+            <font>
+                <Font name="Cambria Bold" size="15.0" />
+            </font>
+        </ToggleButton>
+        <Label alignment="CENTER" layoutX="150.0" layoutY="149.0" prefHeight="26.0" prefWidth="117.0" style="-fx-font-family: Bungee; -fx-font-size: 18;" text="Password" textAlignment="CENTER" textFill="#e83c4b">
+            <font>
+                <Font name="Cambria Bold" size="20.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="383.0" fitWidth="388.0" layoutX="402.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../images/logo_light.png" />
+            </image>
+        </ImageView>
+        <Label alignment="CENTER" layoutX="172.0" layoutY="233.0" prefHeight="26.0" prefWidth="73.0" style="-fx-font-family: Bungee; -fx-font-size: 18;" text="Phone" textAlignment="CENTER" textFill="#e83c4b">
+            <font>
+                <Font name="Cambria Bold" size="20.0" />
+            </font>
+        </Label>
+        <TextField fx:id="phoneNumberField" layoutX="99.0" layoutY="267.0" prefHeight="28.0" prefWidth="256.0" style="-fx-background-color: #e3dbca; -fx-text-fill: #1b1b18; -fx-font-family: Cambria; -fx-background-radius: 5;">
+         <font>
+            <Font name="Cambria Bold" size="14.0" />
+         </font></TextField>
+        <TextField fx:id="usernameField11" alignment="CENTER" layoutX="50.0" layoutY="267.0" prefHeight="28.0" prefWidth="49.0" style="-fx-background-color: #e83c4b; -fx-text-fill: #e3dbca; -fx-font-family: Bungee; -fx-background-size: 14; -fx-background-radius: 5;" text="+88">
+            <font>
+                <Font name="Cambria Bold" size="14.0" />
+            </font>
+        </TextField>
+      <Button fx:id="goBack" alignment="CENTER" layoutX="50.0" layoutY="330.0" mnemonicParsing="false" onAction="#handleGoBack" prefHeight="28.0" prefWidth="89.0" style="-fx-background-color: #e83c4b; -fx-font-family: Bungee; -fx-font-size: 15; -fx-background-radius: 5;" text="Go Back" textFill="#e3dbca">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>

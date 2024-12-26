@@ -1,0 +1,17 @@
+.toggle-button {
+    -fx-background-color:  #1b1b18;
+    -fx-font-family: "Bungee";
+    -fx-font-size: 11;
+    -fx-text-fill: #e3dbca;
+    -fx-border-radius: 5px;
+    -fx-padding: 2.5 5;
+    -fx-cursor: hand;
+    -fx-effect: none;
+}
+
+.toggle-button:hover {
+    -fx-text-fill: #e83c4b;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0, 2, 2);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}

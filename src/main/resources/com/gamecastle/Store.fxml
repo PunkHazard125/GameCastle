@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="384.0" prefWidth="785.0" style="-fx-background-color: #2e3c56;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gamecastle.Controllers.StoreController">
+
+    <children>
+      <ListView fx:id="gameListView" layoutX="20.0" layoutY="60.0" prefHeight="127.0" prefWidth="361.0" stylesheets="@stylesheets/gameList.css" />
+      <Button fx:id="purchase" layoutX="291.0" layoutY="198.0" mnemonicParsing="false" onAction="#handlePurchase" prefHeight="28.0" prefWidth="90.0" style="-fx-background-color: #e83c4b; -fx-font-family: Bungee; -fx-background-radius: 5;" text="Purchase" textFill="#1b1b18" />
+      <ListView fx:id="cartListView" layoutX="20.0" layoutY="238.0" prefHeight="127.0" prefWidth="361.0" stylesheets="@stylesheets/cartList.css" />
+      <Button fx:id="removeFromCart" layoutX="121.0" layoutY="198.0" mnemonicParsing="false" onAction="#handleRemoveFromCart" prefHeight="28.0" prefWidth="143.0" style="-fx-background-color: #faaa68; -fx-font-family: Bungee; -fx-background-radius: 5;" text="Remove from Cart" textFill="#1b1b18" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="19.0" prefHeight="28.0" prefWidth="143.0" style="-fx-background-color: #73bda8; -fx-font-family: Bungee; -fx-background-radius: 5;" text="Available Games" textAlignment="CENTER" textFill="#1b1b18" textOverrun="CENTER_ELLIPSIS" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="198.0" prefHeight="28.0" prefWidth="90.0" style="-fx-background-color: #faaa68; -fx-font-family: Bungee; -fx-background-radius: 5;" text="Your Cart" textAlignment="CENTER" textFill="#1b1b18" textOverrun="CENTER_ELLIPSIS" />
+      <Button fx:id="addToCart" layoutX="172.0" layoutY="19.0" mnemonicParsing="false" onAction="#handleAddToCart" prefHeight="28.0" prefWidth="105.0" style="-fx-background-color: #73bda8; -fx-font-family: Bungee; -fx-background-radius: 5;" text="Add to Cart" textFill="#1b1b18" />
+      <ImageView fitHeight="383.0" fitWidth="383.0" layoutX="402.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/logo_store.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="goBack" layoutX="311.0" layoutY="19.0" mnemonicParsing="false" onAction="#goBack" prefHeight="28.0" prefWidth="70.0" style="-fx-background-color: #faf2ed; -fx-font-family: Bungee; -fx-background-radius: 5;" text="go back" textFill="#1b1b18" />
+    </children>
+</AnchorPane>
