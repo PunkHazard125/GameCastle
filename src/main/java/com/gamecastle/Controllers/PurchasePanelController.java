@@ -1,6 +1,7 @@
 package com.gamecastle.Controllers;
 
 import com.gamecastle.Management.Database;
+import com.gamecastle.Models.Customer;
 import com.gamecastle.Models.Game;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
@@ -20,9 +21,8 @@ import javafx.util.Duration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Random;
 
-public class PurchasePanelController {
+public class PurchasePanelController implements GameServices {
 
     @FXML
     private Label total;
@@ -75,9 +75,7 @@ public class PurchasePanelController {
         Image icon  = new Image(getClass().getResourceAsStream("/images/icon.png"));
         stage.getIcons().add(icon);
 
-        for (Game game : cart) {
-            this.totalAmount += game.getPrice();
-        }
+        this.totalAmount = calculateTotal(this.cart);
 
         this.total.setText(String.format("$%.2f", totalAmount));
     }
@@ -93,9 +91,7 @@ public class PurchasePanelController {
 
             codePane.setVisible(true);
 
-            Random random = new Random();
-            int code = random.nextInt(90001) + 510000;
-            this.otp = Integer.toString(code);
+            this.otp = GameServices.generateOTP();
             otpLabel.setText(this.otp);
 
         });
@@ -108,7 +104,7 @@ public class PurchasePanelController {
             {
                 showError("Invalid Choice", "Generate an OTP First!");
             }
-            else if (this.otp.equals(codeField.getText()))
+            else if (GameServices.verifyOTP(this.otp, codeField.getText()))
             {
                 verification = true;
                 verificationPane.setVisible(true);
@@ -159,13 +155,7 @@ public class PurchasePanelController {
 
         if (balance >= totalAmount && verification)
         {
-            database.getLoggedInCustomer().updateWallet(-totalAmount);
-
-            for (Game game : cart) {
-                database.getLoggedInCustomer().addGame(game);
-            }
-
-            database.saveUser(database.getLoggedInCustomer());
+            purchaseGame();
 
             progressPane.setVisible(true);
             finalPane.setVisible(false);
@@ -247,6 +237,41 @@ public class PurchasePanelController {
         });
 
         timeline.play();
+    }
+
+    @Override
+    public void purchaseGame() {
+
+        database.getLoggedInCustomer().updateWallet(-totalAmount);
+
+        addGamesToLibrary(cart, database.getLoggedInCustomer());
+
+        database.saveUser(database.getLoggedInCustomer());
+
+    }
+
+    @Override
+    public void addGamesToLibrary(ArrayList<Game> cart, Customer customer) {
+
+        for (Game game : cart)
+        {
+            customer.addGame(game);
+        }
+
+    }
+
+    @Override
+    public double calculateTotal(ArrayList<Game> cart) {
+
+        double total = 0;
+
+        for (Game game : cart)
+        {
+            total += game.getPrice();
+        }
+
+        return total;
+
     }
 
     private void showError(String title, String content) {

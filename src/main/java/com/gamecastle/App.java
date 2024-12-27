@@ -11,10 +11,9 @@ import javafx.stage.Stage;
 
 public class App extends Application {
 
-    private Database database;
+    private Database database = new Database();
 
     public App() {
-        this.database = new Database();
     }
 
     @Override

@@ -2,7 +2,7 @@ package com.gamecastle.Models;
 
 import java.util.ArrayList;
 
-public class Customer extends User {
+public class Customer extends User implements LibraryManagement {
 
     private String phone;
     private ArrayList<Game> library;
@@ -36,18 +36,17 @@ public class Customer extends User {
         this.wallet += wallet;
     }
 
-    public void setLibrary(ArrayList<Game> cart) {
-        this.library = cart;
-    }
-
+    @Override
     public ArrayList<Game> getLibrary() {
         return this.library;
     }
 
+    @Override
     public void addGame(Game game) {
         this.library.add(game);
     }
 
+    @Override
     public void deleteGame(Game game) {
         this.library.remove(game);
     }

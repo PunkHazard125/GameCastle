@@ -1,8 +1,8 @@
 package com.gamecastle.Controllers;
 
 import com.gamecastle.Management.Database;
-import com.gamecastle.Models.Admin;
 import com.gamecastle.Models.Customer;
+import com.gamecastle.Models.User;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -58,11 +58,9 @@ public class LoginPanelController {
 
         String username = usernameField.getText();
         String password = passwordField.getText();
-        Admin admin = new Admin();
+        User user = new User(username, password);
 
-        Customer customer = database.Validate(username, password);
-
-        if (username.equals(admin.getUsername()) && password.equals(admin.getPassword()))
+        if (database.isAdmin(user))
         {
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/gamecastle/AdminPanel.fxml"));
@@ -83,7 +81,9 @@ public class LoginPanelController {
         }
         else
         {
-            if (customer!=null)
+            Customer customer = database.validateCustomer(user);
+
+            if (customer != null)
             {
                 try {
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/gamecastle/CustomerPanel.fxml"));
