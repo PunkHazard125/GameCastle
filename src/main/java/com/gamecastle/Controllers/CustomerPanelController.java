@@ -2,6 +2,7 @@ package com.gamecastle.Controllers;
 
 import com.gamecastle.Management.Database;
 import com.gamecastle.Models.Customer;
+import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,6 +11,7 @@ import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 public class CustomerPanelController {
 
@@ -19,6 +21,8 @@ public class CustomerPanelController {
     private Label balanceLabel;
     @FXML
     private TextField amountField;
+    @FXML
+    private TextField phoneField;
     @FXML
     private Button update;
     @FXML
@@ -44,29 +48,61 @@ public class CustomerPanelController {
 
         walletPane.setVisible(false);
 
-        goBackWalletMenu.setOnAction(event -> walletPane.setVisible(false));
+        goBackWalletMenu.setOnAction(event -> {
+
+            TranslateTransition slideOut = new TranslateTransition(Duration.millis(500), walletPane);
+            slideOut.setFromX(0);
+            slideOut.setToX(-400);
+            slideOut.setOnFinished(animationEvent -> walletPane.setVisible(false));
+
+            slideOut.play();
+
+        });
 
         update.setOnAction(event -> {
+
+            Customer loggedInCustomer = database.getLoggedInCustomer();
+
             try {
                 String amountText = amountField.getText().trim();
                 double amount = Double.parseDouble(amountText);
+
+                if (!(phoneField.getText().equals(loggedInCustomer.getPhone())))
+                {
+                    showAlert("Incorrect Phone Number!", "Please enter correct phone number.");
+                    return;
+                }
 
                 if (amount <= 0) {
                     showAlert("Invalid Amount", "Please enter a positive amount.");
                     return;
                 }
 
-                Customer loggedInCustomer = database.getLoggedInCustomer();
-                if (loggedInCustomer != null) {
-                    loggedInCustomer.updateWallet(amount);
-                    database.saveUser(database.getLoggedInCustomer());
-                    showInfo("Wallet Updated", "Your wallet has been updated successfully!");
-                    amountField.clear();
-                    walletPane.setVisible(false);
-                } else {
-                    showAlert("Error", "No customer is currently logged in.");
+                if (amount > 10000){
+                    showAlert("Limit Exceeded!", "Cannot transfer more than $10000 at once.");
+                    return;
                 }
-            } catch (NumberFormatException ex) {
+
+                if (loggedInCustomer.getWallet() + amount > 100000){
+                    showAlert("Limit Exceeded!", "Account balance cannot be more than $100000.");
+                    return;
+                }
+
+                loggedInCustomer.updateWallet(amount);
+                database.saveUser(database.getLoggedInCustomer());
+                showInfo("Wallet Updated", "Your wallet has been updated successfully!");
+                phoneField.clear();
+                amountField.clear();
+
+                TranslateTransition slideOut = new TranslateTransition(Duration.millis(500), walletPane);
+                slideOut.setFromX(0);
+                slideOut.setToX(-400);
+                slideOut.setOnFinished(animationEvent -> walletPane.setVisible(false));
+
+                slideOut.play();
+
+            }
+            catch (NumberFormatException ex) {
                 showAlert("Invalid Input", "Please enter a numeric value.");
             }
         });
@@ -167,7 +203,14 @@ public class CustomerPanelController {
     @FXML
     public void handleWallet() {
 
+        walletPane.setTranslateX(-400);
         walletPane.setVisible(true);
+
+        TranslateTransition slideIn = new TranslateTransition(Duration.millis(500), walletPane);
+        slideIn.setFromX(-400);
+        slideIn.setToX(0);
+        slideIn.play();
+
         balanceLabel.setText(String.format("$%.2f", database.getLoggedInCustomer().getWallet()));
 
     }

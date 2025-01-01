@@ -3,9 +3,7 @@ package com.gamecastle.Controllers;
 import com.gamecastle.Management.Database;
 import com.gamecastle.Models.Customer;
 import com.gamecastle.Models.Game;
-import javafx.animation.KeyFrame;
-import javafx.animation.KeyValue;
-import javafx.animation.Timeline;
+import javafx.animation.*;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -89,7 +87,13 @@ public class PurchasePanelController implements GameServices {
 
         generateCode.setOnAction ( event -> {
 
+            codePane.setOpacity(0);
             codePane.setVisible(true);
+
+            FadeTransition fadeIn = new FadeTransition(Duration.millis(300), codePane);
+            fadeIn.setFromValue(0);
+            fadeIn.setToValue(1);
+            fadeIn.play();
 
             this.otp = GameServices.generateOTP();
             otpLabel.setText(this.otp);
@@ -98,7 +102,11 @@ public class PurchasePanelController implements GameServices {
 
         submitCode.setOnAction ( event -> {
 
-            codePane.setVisible(false);
+            FadeTransition fadeOut = new FadeTransition(Duration.millis(300), codePane);
+            fadeOut.setFromValue(1);
+            fadeOut.setToValue(0);
+            fadeOut.setOnFinished(e -> codePane.setVisible(false));
+            fadeOut.play();
 
             if (this.otp == null)
             {
@@ -108,6 +116,12 @@ public class PurchasePanelController implements GameServices {
             {
                 verification = true;
                 verificationPane.setVisible(true);
+                verificationPane.setOpacity(0);
+
+                FadeTransition fadeIn = new FadeTransition(Duration.millis(300), verificationPane);
+                fadeIn.setFromValue(0);
+                fadeIn.setToValue(1);
+                fadeIn.play();
             }
             else
             {
@@ -222,6 +236,7 @@ public class PurchasePanelController implements GameServices {
 
     @FXML
     private void startProgressBarAnimation() {
+
         finalPane.setVisible(true);
         progressPane.setVisible(true);
         progressBar.setProgress(0);
@@ -237,6 +252,7 @@ public class PurchasePanelController implements GameServices {
         });
 
         timeline.play();
+
     }
 
     @Override

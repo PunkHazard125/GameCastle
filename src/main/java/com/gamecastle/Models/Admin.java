@@ -3,7 +3,7 @@ package com.gamecastle.Models;
 public class Admin extends User {
 
     public Admin() {
-        super("Admin", "2325");
+        super("Admin", "212325");
     }
 
     @Override

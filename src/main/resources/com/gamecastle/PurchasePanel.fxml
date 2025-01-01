@@ -19,7 +19,7 @@
    </TextField>
    <Button fx:id="submitCode" layoutX="657.0" layoutY="140.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="82.0" style="-fx-background-color: #73bda8; -fx-font-family: Bungee; -fx-font-size: 14; -fx-background-radius: 5;" text="Submit" textFill="#2e3c55" />
    <Button fx:id="generateCode" layoutX="533.0" layoutY="138.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="98.0" style="-fx-background-color: #faaa68; -fx-font-family: Bungee; -fx-font-size: 14; -fx-background-radius: 5;" text="Generate" textFill="#2e3c55" />
-   <Pane fx:id="verificationPane" layoutX="421.0" layoutY="40.0" prefHeight="144.0" prefWidth="323.0" style="-fx-background-color: #73bda8; -fx-background-radius: 10;">
+   <Pane fx:id="verificationPane" layoutX="421.0" layoutY="40.0" prefHeight="144.0" prefWidth="323.0" style="-fx-background-color: #73bda8; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 4, 4);">
       <children>
          <Label alignment="CENTER" contentDisplay="CENTER" layoutX="75.0" layoutY="79.0" prefHeight="22.0" prefWidth="173.0" style="-fx-font-family: Bungee; -fx-font-size: 20;" text="Complete!" textAlignment="CENTER" textFill="#2e3c55" />
          <Label alignment="CENTER" contentDisplay="CENTER" layoutX="75.0" layoutY="44.0" prefHeight="22.0" prefWidth="173.0" style="-fx-font-family: Bungee; -fx-font-size: 20;" text="Verification" textAlignment="CENTER" textFill="#2e3c55" />
@@ -30,14 +30,14 @@
    <Label alignment="CENTER" layoutX="436.0" layoutY="258.0" prefHeight="32.0" prefWidth="151.0" style="-fx-font-family: Bungee; -fx-font-size: 16;" text="Total Amount: " textFill="#2e3c55" />
    <Label fx:id="total" alignment="CENTER" contentDisplay="CENTER" layoutX="587.0" layoutY="258.0" prefHeight="32.0" prefWidth="151.0" style="-fx-font-family: Bungee; -fx-font-size: 16;" textFill="#faaa68" />
    <Button fx:id="cancelPayment" layoutX="480.0" layoutY="314.0" mnemonicParsing="false" onAction="#handleCancelPayment" prefHeight="32.0" prefWidth="82.0" style="-fx-background-color: #2e3c55; -fx-font-family: Bungee; -fx-font-size: 14; -fx-background-radius: 5;" text="Cancel" textFill="#fbf2ec" />
-   <Pane fx:id="codePane" layoutX="423.0" layoutY="206.0" prefHeight="144.0" prefWidth="323.0" style="-fx-background-color: #faaa68; -fx-background-radius: 10;">
+   <Pane fx:id="codePane" layoutX="423.0" layoutY="206.0" prefHeight="144.0" prefWidth="323.0" style="-fx-background-color: #faaa68; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 4, 4);">
       <children>
          <Label alignment="CENTER" layoutX="75.0" layoutY="31.0" prefHeight="22.0" prefWidth="173.0" style="-fx-font-family: Bungee; -fx-font-size: 20;" text="Your OTP Code" textFill="#2e3c55" />
          <Label fx:id="otpLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="39.0" layoutY="75.0" prefHeight="32.0" prefWidth="173.0" style="-fx-font-family: Bungee; -fx-background-radius: 5; -fx-background-color: #fbf2ec; -fx-font-size: 16;" textAlignment="CENTER" textFill="#2e3c55" />
          <Button fx:id="copyCode" layoutX="212.0" layoutY="74.0" mnemonicParsing="false" onAction="#handleGoBack" prefHeight="32.0" prefWidth="73.0" style="-fx-background-color: #2e3c55; -fx-background-radius: 5; -fx-font-family: Bungee; -fx-font-size: 16;" text="Copy" textFill="#fbf2ec" />
       </children>
    </Pane>
-   <Pane fx:id="finalPane" layoutX="419.0" layoutY="12.0" prefHeight="360.0" prefWidth="330.0" style="-fx-background-color: #fbf2ec;">
+   <Pane fx:id="finalPane" layoutX="419.0" layoutY="12.0" prefHeight="360.0" prefWidth="347.0" style="-fx-background-color: #fbf2ec;">
       <children>
          <Button fx:id="ok" alignment="CENTER" layoutX="137.0" layoutY="289.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="54.0" style="-fx-background-color: #2e3c55; -fx-background-radius: 5; -fx-font-family: Bungee; -fx-font-size: 18;" text="Ok" textAlignment="CENTER" textFill="#fbf2ec" textOverrun="CENTER_ELLIPSIS" />
          <Label alignment="CENTER" contentDisplay="CENTER" layoutX="40.0" layoutY="69.0" prefHeight="22.0" prefWidth="251.0" style="-fx-font-family: Bungee; -fx-font-size: 16;" text="Transaction Successful!" textAlignment="CENTER" textFill="#41ab5d" textOverrun="CENTER_ELLIPSIS" />
@@ -46,7 +46,7 @@
          <Label fx:id="finalAmountLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="112.0" layoutY="143.0" prefHeight="22.0" prefWidth="108.0" style="-fx-font-family: Bungee; -fx-font-size: 16;" textAlignment="CENTER" textFill="#faaa68" textOverrun="CENTER_ELLIPSIS" />
          <Label alignment="CENTER" contentDisplay="CENTER" layoutX="78.0" layoutY="187.0" prefHeight="22.0" prefWidth="173.0" style="-fx-font-family: Bungee; -fx-font-size: 16;" text="Time of Purchase" textAlignment="CENTER" textFill="#2e3c55" textOverrun="CENTER_ELLIPSIS" />
          <Label fx:id="timeLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="215.0" prefHeight="32.0" prefWidth="306.0" style="-fx-font-family: Bungee; -fx-font-size: 16;" textAlignment="CENTER" textFill="#e83c4b" textOverrun="CENTER_ELLIPSIS" />
-         <Pane fx:id="progressPane" layoutX="-2.0" layoutY="13.0" prefHeight="335.0" prefWidth="330.0" style="-fx-background-color: #fbf2ec;">
+         <Pane fx:id="progressPane" layoutX="-2.0" layoutY="13.0" prefHeight="335.0" prefWidth="342.0" style="-fx-background-color: #fbf2ec;">
             <children>
                <ProgressBar fx:id="progressBar" layoutX="41.0" layoutY="172.0" prefHeight="32.0" prefWidth="251.0" progress="0.0" style="-fx-accent: #e83c4b; -fx-background-radius: 5;" />
                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="36.0" layoutY="131.0" prefHeight="22.0" prefWidth="258.0" style="-fx-font-family: Bungee; -fx-font-size: 18;" text="Completing Purchase..." textAlignment="CENTER" textFill="#2e3c55" textOverrun="CENTER_ELLIPSIS" />
