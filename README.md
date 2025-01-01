@@ -6,7 +6,7 @@ MUST NEEDED:
 
 - Admin Credentials (Cannot be changed):
   - Username: Admin.
-  - Password: 2325.
+  - Password: 212325.
 
 - How to Run:
   1. Open as project in IntelliJ Idea IDE.
