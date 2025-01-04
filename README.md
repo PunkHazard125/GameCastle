@@ -12,8 +12,8 @@ MUST NEEDED:
   1. Open as project in IntelliJ Idea IDE.
   2. Download, and install JavaFX framework and related tools.
   3. Go to File -> Project Structure and add your installed JavaFX SDK to the project library, and apply the settings.
-  4. Install the 'Bungee' font in the "src/main/resources/fonts" folder;
-     otherwise the program and scenebuilder might not display the used font.
+  4. Install all of the fonts in the "src/main/resources/fonts" folder;
+     otherwise the program and scenebuilder might not display the used fonts.
   5. Run the App.java file.
 
 Features
