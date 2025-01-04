@@ -13,6 +13,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ListView;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
@@ -129,6 +130,7 @@ public class StoreController {
             purchaseStage.setTitle("Purchase Panel");
             purchaseStage.setScene(new Scene(root));
             purchaseStage.show();
+            purchaseStage.setResizable(false);
 
             this.stage.hide();
 

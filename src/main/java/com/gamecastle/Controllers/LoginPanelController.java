@@ -74,8 +74,11 @@ public class LoginPanelController {
                 stage.setTitle("Admin Panel");
                 stage.setScene(new Scene(root));
                 stage.show();
+                stage.setResizable(false);
+
                 primaryStage.hide();
-            } catch (Exception ex) {
+            }
+            catch (Exception ex) {
                 ex.printStackTrace();
             }
         }
@@ -97,8 +100,11 @@ public class LoginPanelController {
                     stage.setTitle("Customer Panel");
                     stage.setScene(new Scene(root));
                     stage.show();
+                    stage.setResizable(false);
+
                     primaryStage.hide();
-                } catch (Exception ex) {
+                }
+                catch (Exception ex) {
                     ex.printStackTrace();
                 }
             }
@@ -126,6 +132,8 @@ public class LoginPanelController {
             stage.setTitle("Account Creation Panel");
             stage.setScene(new Scene(root));
             stage.show();
+            stage.setResizable(false);
+
             primaryStage.hide();
         } catch (Exception ex) {
             ex.printStackTrace();

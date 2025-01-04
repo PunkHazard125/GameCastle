@@ -20,20 +20,28 @@ public class App extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) {
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/gamecastle/LoginPanel.fxml"));
-        Parent root = loader.load();
+        try
+        {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/gamecastle/LoginPanel.fxml"));
+            Parent root = loader.load();
 
-        LoginPanelController controller = loader.getController();
-        controller.setDatabase(database);
-        controller.setPrimaryStage(primaryStage);
-        Image icon  = new Image(getClass().getResourceAsStream("/images/icon.png"));
-        primaryStage.getIcons().add(icon);
-        primaryStage.setTitle("Login");
-        primaryStage.setScene(new Scene(root));
-        primaryStage.show();
-        primaryStage.setResizable(false);
+            LoginPanelController controller = loader.getController();
+            controller.setDatabase(database);
+            controller.setPrimaryStage(primaryStage);
+            Image icon  = new Image(getClass().getResourceAsStream("/images/icon.png"));
+            primaryStage.getIcons().add(icon);
+            primaryStage.setTitle("Login");
+            primaryStage.setScene(new Scene(root));
+            primaryStage.show();
+            primaryStage.setResizable(false);
+        }
+        catch (Exception ex)
+        {
+            ex.printStackTrace();
+        }
+
     }
 
     public static void main(String[] args) {

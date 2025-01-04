@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="384.0" prefWidth="785.0" style="-fx-background-color: #e83c4b;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gamecastle.Controllers.LoginPanelController">
+<AnchorPane prefHeight="378.0" prefWidth="785.0" style="-fx-background-color: #e83c4b;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gamecastle.Controllers.LoginPanelController">
     <children>
         <Label alignment="CENTER" contentDisplay="CENTER" layoutX="456.0" layoutY="24.0" prefHeight="44.0" prefWidth="264.0" style="-fx-font-family: Bungee; -fx-font-size: 25;" text="Welcome, Gamer!" textAlignment="CENTER" textFill="#e3dbca" />
         <Label alignment="CENTER" layoutX="533.0" layoutY="80.0" prefHeight="31.0" prefWidth="113.0" style="-fx-font-family: Bungee; -fx-font-size: 18;" text="Username" textAlignment="CENTER" textFill="#1b1b18">
@@ -25,11 +25,11 @@
         </Button>
         <TextField fx:id="usernameField" layoutX="446.0" layoutY="119.0" prefHeight="31.0" prefWidth="283.0" style="-fx-background-color: #e3dbca; -fx-text-fill: #1b1b18; -fx-background-radius: 5;">
          <font>
-            <Font name="Cambria Bold" size="14.0" />
+            <Font name="JetBrains Mono Regular" size="14.0" />
          </font></TextField>
         <TextField fx:id="passwordTextField" layoutX="447.0" layoutY="208.0" prefHeight="31.0" prefWidth="229.0" style="-fx-background-color: #e3dbca; -fx-text-fill: #1b1b18; -fx-background-radius: 5;">
             <font>
-                <Font name="Cambria Bold" size="14.0" />
+                <Font name="JetBrains Mono Regular" size="14.0" />
             </font>
         </TextField>
         <PasswordField fx:id="passwordField" layoutX="447.0" layoutY="208.0" prefHeight="31.0" prefWidth="229.0" style="-fx-background-color: #e3dbca; -fx-text-fill: #1b1b18; -fx-background-radius: 5;">
@@ -46,7 +46,7 @@
                 <Font name="Cambria Bold" size="20.0" />
             </font>
         </Label>
-      <ImageView fitHeight="384.0" fitWidth="384.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="384.0" fitWidth="384.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../images/logo_dark.png" />
          </image>

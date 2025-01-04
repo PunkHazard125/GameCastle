@@ -125,6 +125,7 @@ public class CustomerPanelController {
             libraryStage.setTitle("Library");
             libraryStage.setScene(new Scene(root));
             libraryStage.show();
+            libraryStage.setResizable(false);
 
             this.stage.hide();
 
@@ -148,6 +149,7 @@ public class CustomerPanelController {
             storeStage.setTitle("Store");
             storeStage.setScene(new Scene(root));
             storeStage.show();
+            storeStage.setResizable(false);
 
             this.stage.hide();
 
