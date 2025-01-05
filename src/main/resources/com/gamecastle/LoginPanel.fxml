@@ -25,11 +25,11 @@
         </Button>
         <TextField fx:id="usernameField" layoutX="446.0" layoutY="119.0" prefHeight="31.0" prefWidth="283.0" style="-fx-background-color: #e3dbca; -fx-text-fill: #1b1b18; -fx-background-radius: 5;">
          <font>
-            <Font name="JetBrains Mono Regular" size="14.0" />
+            <Font name="Cambria Bold" size="14.0" />
          </font></TextField>
         <TextField fx:id="passwordTextField" layoutX="447.0" layoutY="208.0" prefHeight="31.0" prefWidth="229.0" style="-fx-background-color: #e3dbca; -fx-text-fill: #1b1b18; -fx-background-radius: 5;">
             <font>
-                <Font name="JetBrains Mono Regular" size="14.0" />
+                <Font name="Cambria Bold" size="14.0" />
             </font>
         </TextField>
         <PasswordField fx:id="passwordField" layoutX="447.0" layoutY="208.0" prefHeight="31.0" prefWidth="229.0" style="-fx-background-color: #e3dbca; -fx-text-fill: #1b1b18; -fx-background-radius: 5;">

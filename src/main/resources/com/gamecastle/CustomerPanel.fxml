@@ -50,9 +50,9 @@
             </TextField>
             <Button fx:id="goBackWalletMenu" alignment="CENTER" layoutX="205.0" layoutY="286.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="109.0" style="-fx-background-color: #fea098; -fx-font-family: Bungee; -fx-font-size: 17; -fx-background-radius: 5;" text="Go Back" textAlignment="CENTER" textFill="#1b1b18" />
             <Label alignment="CENTER" contentDisplay="CENTER" layoutX="87.0" layoutY="55.0" prefHeight="26.0" prefWidth="200.0" style="-fx-font-family: Bungee; -fx-font-size: 18;" text="Current Balance" textAlignment="CENTER" textFill="#73bda8" textOverrun="CENTER_ELLIPSIS" />
-            <Label fx:id="balanceLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="87.0" prefHeight="26.0" prefWidth="347.0" textAlignment="CENTER" textFill="#1b1b18" textOverrun="CENTER_ELLIPSIS">
+            <Label fx:id="balanceLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="87.0" prefHeight="31.0" prefWidth="347.0" style="-fx-font-family: Bungee; -fx-font-size: 18; -fx-text-fill: #1b1b18;" textAlignment="CENTER" textFill="#1b1b18" textOverrun="CENTER_ELLIPSIS">
                <font>
-                  <Font name="JetBrains Mono ExtraBold" size="18.0" />
+                  <Font name="Cambria Bold" size="18.0" />
                </font></Label>
             <TextField fx:id="phoneField" alignment="CENTER" layoutX="20.0" layoutY="158.0" prefHeight="30.0" prefWidth="329.0" style="-fx-background-color: #2e3c56; -fx-background-radius: 5; -fx-text-fill: #faf2ed;">
                <font>

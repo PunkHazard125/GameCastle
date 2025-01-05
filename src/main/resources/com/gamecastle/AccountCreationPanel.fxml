@@ -13,18 +13,18 @@
                 <Font size="20.0" />
             </font>
         </Label>
-        <Button fx:id="createAccount" alignment="CENTER" contentDisplay="CENTER" layoutX="197.0" layoutY="330.0" mnemonicParsing="false" onAction="#handleCreateAccount" prefHeight="28.0" prefWidth="158.0" style="-fx-background-color: #e3dbca; -fx-font-family: Bungee; -fx-font-size: 15; -fx-background-radius: 5;" text="Create Account" textAlignment="CENTER" textFill="#1b1b18">
+        <Button fx:id="createAccount" alignment="CENTER" contentDisplay="CENTER" layoutX="197.0" layoutY="330.0" mnemonicParsing="false" onAction="#handleCreateAccount" prefHeight="28.0" prefWidth="158.0" stylesheets="@stylesheets/accountCreationButton.css" text="Create Account" textAlignment="CENTER" textFill="#1b1b18">
             <font>
                 <Font size="18.0" />
             </font>
         </Button>
         <TextField fx:id="usernameField" layoutX="47.0" layoutY="98.0" prefHeight="28.0" prefWidth="307.0" style="-fx-background-color: #e3dbca; -fx-text-fill: #1b1b18; -fx-background-radius: 5;">
          <font>
-            <Font name="JetBrains Mono Regular" size="14.0" />
+            <Font name="Cambria Bold" size="14.0" />
          </font></TextField>
         <TextField fx:id="passwordTextField" layoutX="50.0" layoutY="182.0" prefHeight="28.0" prefWidth="246.0" style="-fx-background-color: #e3dbca; -fx-text-fill: #1b1b18; -fx-font-family: Cambria; -fx-background-radius: 5;">
             <font>
-                <Font name="JetBrains Mono Regular" size="14.0" />
+                <Font name="Cambria Bold" size="14.0" />
             </font>
         </TextField>
         <PasswordField fx:id="passwordField" layoutX="50.0" layoutY="182.0" prefHeight="28.0" prefWidth="246.0" style="-fx-background-color: #e3dbca; -fx-text-fill: #1b1b18; -fx-background-radius: 5;">
@@ -53,7 +53,7 @@
         </Label>
         <TextField fx:id="phoneNumberField" layoutX="99.0" layoutY="267.0" prefHeight="28.0" prefWidth="256.0" style="-fx-background-color: #e3dbca; -fx-text-fill: #1b1b18; -fx-font-family: Cambria; -fx-background-radius: 5;">
          <font>
-            <Font name="JetBrains Mono Regular" size="14.0" />
+            <Font name="Cambria Bold" size="14.0" />
          </font></TextField>
         <TextField fx:id="usernameField11" alignment="CENTER" layoutX="50.0" layoutY="267.0" prefHeight="28.0" prefWidth="49.0" style="-fx-background-color: #e83c4b; -fx-text-fill: #e3dbca; -fx-font-family: Bungee; -fx-background-size: 14; -fx-background-radius: 5;" text="+88">
             <font>
