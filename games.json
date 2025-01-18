@@ -1,5 +1,4 @@
 [
-
   {"name":"Age of Empires IV", "price":39.99},
   {"name":"Assassin's Creed III", "price":19.99},
   {"name":"Assassin's Creed IV: Black Flag", "price":29.99},
@@ -106,5 +105,4 @@
   {"name":"Watch Dogs 2", "price":59.99},
   {"name":"Watch Dogs: Legion", "price":59.99},
   {"name":"Wolfenstein II: The New Colossus", "price":39.99}
-
 ]
