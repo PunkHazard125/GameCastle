@@ -28,25 +28,21 @@
     -fx-background-color: transparent;
 }
 
-/* Scrollbar Track */
 .scroll-bar {
-    -fx-background-color:  #faf2ed; /* Track color */
+    -fx-background-color:  #faf2ed;
     -fx-background-radius: 5px;
 }
 
-/* Scrollbar Thumb */
 .scroll-bar .thumb {
-    -fx-background-color: #fea098; /* Thumb color */
+    -fx-background-color: #fea098;
     -fx-background-radius: 5px;
 }
 
-/* Scrollbar Thumb on Hover */
 .scroll-bar .thumb:hover {
-    -fx-background-color: #e83c4b; /* Hover thumb color */
+    -fx-background-color: #e83c4b;
 }
 
-/* Scrollbar Arrow Buttons */
 .scroll-bar .increment-button,
 .scroll-bar .decrement-button {
-    -fx-background-color: transparent; /* Arrow button color */
+    -fx-background-color: transparent;
 }

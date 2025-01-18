@@ -31,7 +31,7 @@
          <font>
             <Font name="Cambria Bold" size="14.0" />
          </font></PasswordField>
-        <ToggleButton fx:id="showPassword" contentDisplay="CENTER" layoutX="294.0" layoutY="182.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="60.0" style="-fx-background-color: #e83c4b; -fx-font-family: Bungee; -fx-font-size: 14; -fx-background-radius: 5;" text="Show" textAlignment="CENTER" textFill="#e3dbca">
+        <ToggleButton fx:id="showPassword" contentDisplay="CENTER" layoutX="294.0" layoutY="182.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="60.0" stylesheets="@stylesheets/accountCreationShow.css" text="Show" textAlignment="CENTER" textFill="#e3dbca">
             <font>
                 <Font name="Cambria Bold" size="15.0" />
             </font>
@@ -60,7 +60,7 @@
                 <Font name="Cambria Bold" size="14.0" />
             </font>
         </TextField>
-      <Button fx:id="goBack" alignment="CENTER" layoutX="50.0" layoutY="330.0" mnemonicParsing="false" onAction="#handleGoBack" prefHeight="28.0" prefWidth="89.0" style="-fx-background-color: #e83c4b; -fx-font-family: Bungee; -fx-font-size: 15; -fx-background-radius: 5;" text="Go Back" textFill="#e3dbca">
+      <Button fx:id="goBack" alignment="CENTER" layoutX="50.0" layoutY="330.0" mnemonicParsing="false" onAction="#handleGoBack" prefHeight="28.0" prefWidth="89.0" style="-fx-background-color: #e83c4b; -fx-font-family: Bungee; -fx-font-size: 15; -fx-background-radius: 5;" stylesheets="@stylesheets/accountCreationGoBack.css" text="Go Back" textFill="#e3dbca">
          <font>
             <Font size="18.0" />
          </font>

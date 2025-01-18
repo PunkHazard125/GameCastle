@@ -10,39 +10,39 @@
     <ImageView fitHeight="385.0" fitWidth="385.0" pickOnBounds="true" preserveRatio="true">
         <Image url="@../../images/logo_purchase.png" />
     </ImageView>
-    <Button fx:id="goBack" layoutX="425.0" layoutY="140.0" mnemonicParsing="false" onAction="#handleGoBack" prefHeight="32.0" prefWidth="82.0" style="-fx-background-color: #2e3c55; -fx-font-family: Bungee; -fx-font-size: 14; -fx-background-radius: 5;" text="Go back" textFill="#fbf2ec" />
+    <Button fx:id="goBack" layoutX="425.0" layoutY="140.0" mnemonicParsing="false" onAction="#handleGoBack" prefHeight="32.0" prefWidth="82.0" style="-fx-background-color: #2e3c55; -fx-font-family: Bungee; -fx-font-size: 14; -fx-background-radius: 5;" stylesheets="@stylesheets/purchaseGoBack.css" text="Go back" textFill="#fbf2ec" />
    <Label alignment="CENTER" layoutX="435.0" layoutY="82.0" prefHeight="32.0" prefWidth="157.0" style="-fx-font-family: Bungee; -fx-font-size: 16;" text="Enter OTP Code:" textFill="#2e3c55" />
    <TextField fx:id="codeField" layoutX="596.0" layoutY="82.0" prefHeight="32.0" prefWidth="142.0" style="-fx-background-color: #2e3c55; -fx-text-fill: #fbf2ec; -fx-background-radius: 5;">
       <font>
-         <Font name="JetBrains Mono Regular" size="14.0" />
+         <Font name="Cambria Bold" size="14.0" />
       </font>
    </TextField>
-   <Button fx:id="submitCode" layoutX="657.0" layoutY="140.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="82.0" style="-fx-background-color: #73bda8; -fx-font-family: Bungee; -fx-font-size: 14; -fx-background-radius: 5;" text="Submit" textFill="#2e3c55" />
-   <Button fx:id="generateCode" layoutX="533.0" layoutY="138.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="98.0" style="-fx-background-color: #faaa68; -fx-font-family: Bungee; -fx-font-size: 14; -fx-background-radius: 5;" text="Generate" textFill="#2e3c55" />
+   <Button fx:id="submitCode" layoutX="657.0" layoutY="140.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="82.0" style="-fx-background-color: #73bda8; -fx-font-family: Bungee; -fx-font-size: 14; -fx-background-radius: 5;" stylesheets="@stylesheets/purchaseSubmit.css" text="Submit" textFill="#2e3c55" />
+   <Button fx:id="generateCode" layoutX="533.0" layoutY="138.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="98.0" style="-fx-background-color: #faaa68; -fx-font-family: Bungee; -fx-font-size: 14; -fx-background-radius: 5;" stylesheets="@stylesheets/purchaseGenerate.css" text="Generate" textFill="#2e3c55" />
    <Pane fx:id="verificationPane" layoutX="421.0" layoutY="40.0" prefHeight="144.0" prefWidth="323.0" style="-fx-background-color: #73bda8; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 4, 4);">
       <children>
          <Label alignment="CENTER" contentDisplay="CENTER" layoutX="75.0" layoutY="79.0" prefHeight="22.0" prefWidth="173.0" style="-fx-font-family: Bungee; -fx-font-size: 20;" text="Complete!" textAlignment="CENTER" textFill="#2e3c55" />
          <Label alignment="CENTER" contentDisplay="CENTER" layoutX="75.0" layoutY="44.0" prefHeight="22.0" prefWidth="173.0" style="-fx-font-family: Bungee; -fx-font-size: 20;" text="Verification" textAlignment="CENTER" textFill="#2e3c55" />
       </children>
    </Pane>
-    <Button fx:id="confirmPayment" layoutX="587.0" layoutY="314.0" mnemonicParsing="false" onAction="#handleConfirm" prefHeight="32.0" prefWidth="108.0" style="-fx-background-color: #e83c4b; -fx-font-family: Bungee; -fx-font-size: 16; -fx-background-radius: 5;" text="Confirm" textFill="#2e3c55" />
+    <Button fx:id="confirmPayment" layoutX="587.0" layoutY="314.0" mnemonicParsing="false" onAction="#handleConfirm" prefHeight="32.0" prefWidth="108.0" style="-fx-background-color: #e83c4b; -fx-font-family: Bungee; -fx-font-size: 16; -fx-background-radius: 5;" stylesheets="@stylesheets/purchaseConfirm.css" text="Confirm" textFill="#2e3c55" />
    <Label alignment="CENTER" layoutX="475.0" layoutY="210.0" prefHeight="32.0" prefWidth="224.0" style="-fx-font-family: Bungee; -fx-font-size: 20;" text="Complete Payment" textFill="#f39d97" />
    <Label alignment="CENTER" layoutX="436.0" layoutY="258.0" prefHeight="32.0" prefWidth="151.0" style="-fx-font-family: Bungee; -fx-font-size: 16;" text="Total Amount: " textFill="#2e3c55" />
    <Label fx:id="total" alignment="CENTER" contentDisplay="CENTER" layoutX="587.0" layoutY="258.0" prefHeight="32.0" prefWidth="151.0" style="-fx-font-family: Bungee; -fx-font-size: 16;" textFill="#faaa68" />
-   <Button fx:id="cancelPayment" layoutX="480.0" layoutY="314.0" mnemonicParsing="false" onAction="#handleCancelPayment" prefHeight="32.0" prefWidth="82.0" style="-fx-background-color: #2e3c55; -fx-font-family: Bungee; -fx-font-size: 14; -fx-background-radius: 5;" text="Cancel" textFill="#fbf2ec" />
+   <Button fx:id="cancelPayment" layoutX="480.0" layoutY="314.0" mnemonicParsing="false" onAction="#handleCancelPayment" prefHeight="32.0" prefWidth="82.0" style="-fx-background-color: #2e3c55; -fx-font-family: Bungee; -fx-font-size: 14; -fx-background-radius: 5;" stylesheets="@stylesheets/purchaseGoBack.css" text="Cancel" textFill="#fbf2ec" />
    <Pane fx:id="codePane" layoutX="423.0" layoutY="206.0" prefHeight="144.0" prefWidth="323.0" style="-fx-background-color: #faaa68; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 4, 4);">
       <children>
          <Label alignment="CENTER" layoutX="75.0" layoutY="31.0" prefHeight="22.0" prefWidth="173.0" style="-fx-font-family: Bungee; -fx-font-size: 20;" text="Your OTP Code" textFill="#2e3c55" />
          <Label fx:id="otpLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="39.0" layoutY="75.0" prefHeight="32.0" prefWidth="173.0" style="-fx-background-radius: 5; -fx-background-color: #fbf2ec;" textAlignment="CENTER" textFill="#2e3c55">
             <font>
-               <Font name="JetBrains Mono Regular" size="16.0" />
+               <Font name="Cambria Bold" size="16.0" />
             </font></Label>
-         <Button fx:id="copyCode" layoutX="212.0" layoutY="74.0" mnemonicParsing="false" onAction="#handleGoBack" prefHeight="32.0" prefWidth="73.0" style="-fx-background-color: #2e3c55; -fx-background-radius: 5; -fx-font-family: Bungee; -fx-font-size: 16;" text="Copy" textFill="#fbf2ec" />
+         <Button fx:id="copyCode" layoutX="212.0" layoutY="74.0" mnemonicParsing="false" onAction="#handleGoBack" prefHeight="32.0" prefWidth="73.0" style="-fx-background-color: #2e3c55; -fx-background-radius: 5; -fx-font-family: Bungee; -fx-font-size: 16;" stylesheets="@stylesheets/purchaseCopy.css" text="Copy" textFill="#fbf2ec" />
       </children>
    </Pane>
    <Pane fx:id="finalPane" layoutX="419.0" layoutY="12.0" prefHeight="360.0" prefWidth="347.0" style="-fx-background-color: #fbf2ec;">
       <children>
-         <Button fx:id="ok" alignment="CENTER" layoutX="137.0" layoutY="289.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="54.0" style="-fx-background-color: #2e3c55; -fx-background-radius: 5; -fx-font-family: Bungee; -fx-font-size: 18;" text="Ok" textAlignment="CENTER" textFill="#fbf2ec" textOverrun="CENTER_ELLIPSIS" />
+         <Button fx:id="ok" alignment="CENTER" layoutX="137.0" layoutY="289.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="54.0" style="-fx-background-color: #2e3c55; -fx-background-radius: 5; -fx-font-family: Bungee; -fx-font-size: 18;" stylesheets="@stylesheets/purchaseOK.css" text="Ok" textAlignment="CENTER" textFill="#fbf2ec" textOverrun="CENTER_ELLIPSIS" />
          <Label alignment="CENTER" contentDisplay="CENTER" layoutX="40.0" layoutY="69.0" prefHeight="22.0" prefWidth="251.0" style="-fx-font-family: Bungee; -fx-font-size: 16;" text="Transaction Successful!" textAlignment="CENTER" textFill="#41ab5d" textOverrun="CENTER_ELLIPSIS" />
          <Label alignment="CENTER" contentDisplay="CENTER" layoutX="41.0" layoutY="38.0" prefHeight="22.0" prefWidth="251.0" style="-fx-font-family: Bungee; -fx-font-size: 16;" text="Order Confirmed!" textAlignment="CENTER" textFill="#077bec" textOverrun="CENTER_ELLIPSIS" />
          <Label alignment="CENTER" contentDisplay="CENTER" layoutX="97.0" layoutY="112.0" prefHeight="22.0" prefWidth="135.0" style="-fx-font-family: Bungee; -fx-font-size: 16;" text="Amount Paid" textAlignment="CENTER" textFill="#2e3c55" textOverrun="CENTER_ELLIPSIS" />

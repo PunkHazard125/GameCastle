@@ -1,16 +1,15 @@
 .button {
-    -fx-background-color: #e3dbca;
+    -fx-background-color: #e83c4b;
     -fx-font-family: "Bungee";
-    -fx-font-size: 15;
-    -fx-text-fill: #e83c4b;
+    -fx-font-size: 12;
+    -fx-text-fill: #1b1b18;
     -fx-background-radius: 5px;
-    -fx-padding: 5 10;
     -fx-cursor: hand;
     -fx-effect: none;
 }
 
 .button:hover {
-    -fx-text-fill: #1b1b18;
+    -fx-text-fill: #faf2ed;
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 4, 4);
     -fx-scale-x: 1.05;
     -fx-scale-y: 1.05;

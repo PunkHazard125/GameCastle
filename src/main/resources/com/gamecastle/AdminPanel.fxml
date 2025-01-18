@@ -14,7 +14,7 @@
                 <Font size="20.0" />
             </font>
         </Label>
-        <Button fx:id="goBack" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="342.0" mnemonicParsing="false" onAction="#goBack" prefHeight="26.0" prefWidth="92.0" style="-fx-background-color: #e3dbca; -fx-font-family: Bungee; -fx-font-size: 15; -fx-background-radius: 5;" text="Go Back" textAlignment="CENTER" textFill="#1b1b18" textOverrun="CENTER_ELLIPSIS">
+        <Button fx:id="goBack" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="342.0" mnemonicParsing="false" onAction="#goBack" prefHeight="26.0" prefWidth="92.0" stylesheets="@stylesheets/adminGoBack.css" text="Go Back" textAlignment="CENTER" textFill="#1b1b18" textOverrun="CENTER_ELLIPSIS">
             <font>
                 <Font size="18.0" />
             </font>
@@ -57,12 +57,12 @@
          <font>
             <Font name="Cambria Bold" size="12.0" />
          </font></TextField>
-      <Button fx:id="removeGame" alignment="CENTER" contentDisplay="CENTER" layoutX="281.0" layoutY="299.0" mnemonicParsing="false" onAction="#removeGame" prefHeight="26.0" prefWidth="86.0" style="-fx-background-color: #e83c4b; -fx-font-family: Bungee; -fx-font-size: 15; -fx-background-radius: 5;" text="Remove" textAlignment="CENTER" textFill="#1b1b18" textOverrun="CENTER_ELLIPSIS">
+      <Button fx:id="removeGame" alignment="CENTER" contentDisplay="CENTER" layoutX="281.0" layoutY="299.0" mnemonicParsing="false" onAction="#removeGame" prefHeight="26.0" prefWidth="86.0" stylesheets="@stylesheets/adminAdd.css" text="Remove" textAlignment="CENTER" textFill="#1b1b18" textOverrun="CENTER_ELLIPSIS">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button fx:id="addGame" alignment="CENTER" contentDisplay="CENTER" layoutX="312.0" layoutY="179.0" mnemonicParsing="false" onAction="#addGame" prefHeight="26.0" prefWidth="55.0" style="-fx-background-color: #e83c4b; -fx-font-family: Bungee; -fx-font-size: 15; -fx-background-radius: 5;" text="Add" textAlignment="CENTER" textFill="#1b1b18" textOverrun="CENTER_ELLIPSIS">
+      <Button fx:id="addGame" alignment="CENTER" contentDisplay="CENTER" layoutX="312.0" layoutY="179.0" mnemonicParsing="false" onAction="#addGame" prefHeight="26.0" prefWidth="55.0" stylesheets="@stylesheets/adminAdd.css" text="Add" textAlignment="CENTER" textFill="#1b1b18" textOverrun="CENTER_ELLIPSIS">
          <font>
             <Font size="18.0" />
          </font>

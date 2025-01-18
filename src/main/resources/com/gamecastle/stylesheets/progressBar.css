@@ -1,7 +1,7 @@
 .custom-progress-bar .track {
-    -fx-background-color: #2e3c55; /* Background of the track */
+    -fx-background-color: #2e3c55;
 }
 
 .custom-progress-bar .bar {
-    -fx-background-color: #f39d97; /* Progress bar fill color */
+    -fx-background-color: #f39d97;
 }
